@@ -1,46 +1,27 @@
 class Worker:
 
-    def __init__(self, name, age, money, house):
+    def __init__(self, name, age, money, surname, patronymic):
         self.name = name
         self.age = age
         self.money = money
-        self.house = house
+        self.surname = surname
+        self.patronymic = patronymic 
 
     def info(self):
         print("Name:", self.name)
         print("Age:", self.age)
         print("Money:", self.money)
-        print("House:", self.house)
+        print("Surname:", self.surname)
+        print("Patronymic:", self.patronymic)
+        
 
     def add_money(self, sum):
         self.money += sum
-        print("Итоговая сумма", self.money)
+        print("Зарплата", self.money)
 
-    def make_deal(self, house, mon):
-        self.money -= mon
-        self.house = house
-
-    def buy_house(self, house, discount):
-        price = house.final_price(discount)
-        if self.money >= price:
-            self.make_deal(house, price)
-            print("Совершена покупка")
-        else:
-            print("Не хватает средств")
-
-class House():
-    def __init__(self, sqare, price):
-        self.sqare = sqare
-        self.price = price
-
-    def final_price(self, discount):
-        final_price = self.price * (100 - discount) / 100
-        print("Финальная цена: ", final_price)
-        return final_price
-
-human1 = Worker("Матвей", 15, 0, None)
-human1.info()
-human1.add_money(10000)
+worker1 = Worker("Матвей", 15, 0, None)
+worker1.info()
+worker1.add_money(10000)
 human1.info()
 house = House(100, 100000)
 print(house.sqare, house.price)
