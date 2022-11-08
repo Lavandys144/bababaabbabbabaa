@@ -15,4 +15,5 @@ class Worker:
         print("Patronymic:", self.patronymic)
         
 def worker_info(self,name, age, money, surname, patronymic):
-        return("Имя"+name+surname+patronymic+"Год рождения"+age+"Зарплата"+money)
+        return("Имя"+name+surname+patronymic+/n"Год рождения"+age+/n"Зарплата"+money)
+
