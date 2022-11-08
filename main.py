@@ -19,14 +19,8 @@ class Worker:
         self.money += sum
         print("Зарплата", self.money)
 
-worker1 = Worker("Матвей", 15, 0, None)
+worker1 = Worker("Миша", 15, 0, None)
 worker1.info()
 worker1.add_money(10000)
-human1.info()
-house = House(100, 100000)
-print(house.sqare, house.price)
-discount = int(input("Скидка: "))
-human1.buy_house(house, discount)
-human1.add_money(100000)
-human1.buy_house(house, discount)
-human1.info()
+worker1.info())
+worker1.info()
